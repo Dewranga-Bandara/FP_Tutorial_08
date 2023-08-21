@@ -22,10 +22,11 @@ object Q3 {
   }
   def main(args: Array[String]): Unit = {
     print("Enter your name: ")
-    val input = readLine()
-    print("Enter a list of indices of Upper Case letters separated by commas(None for -1):")
+    var input = readLine()
+    print("Enter a list of indices of Upper Case letters separated by commas(None for -1): ")
     val inputLine = readLine()
     val indices = inputLine.split(",").map(_.toInt).toList
+    input = input.toLowerCase
 
     if(indices.head == -1)
       println(f"Output: ${toLower(input)}")
